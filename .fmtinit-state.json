@@ -1,0 +1,12 @@
+{
+  "installed_languages": [
+    "markdown",
+    "python"
+  ],
+  "installed_formatters": [
+    "Prettier",
+    "Black",
+    "Ruff"
+  ],
+  "initialized_at": "2026-03-11T20:40:39.363567+00:00"
+}

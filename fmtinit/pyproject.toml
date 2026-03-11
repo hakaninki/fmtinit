@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fmtinit"
+version = "0.1.0"
+description = "Smart formatter bootstrap CLI for multi-language projects"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+    "typer[all]>=0.9",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1",
+]
+
+[project.scripts]
+fmtinit = "fmtinit.main:app"
+
+[project.urls]
+Homepage = "https://github.com/your-username/fmtinit"
+Repository = "https://github.com/your-username/fmtinit"
+Issues = "https://github.com/your-username/fmtinit/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"fmtinit" = ["templates/*.tpl"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short"
+
+[tool.coverage.run]
+source = ["src/fmtinit"]
+omit = ["tests/*"]
