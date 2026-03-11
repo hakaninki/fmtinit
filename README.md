@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![CI](https://github.com/hakaninki/fmtinit-formatter/actions/workflows/ci.yml/badge.svg)
+![Platform](https://img.shields.io/badge/platform-CLI-black)
 ## Overview
 
 `fmtinit` is a CLI tool that sets up code formatters and pre-commit hooks
